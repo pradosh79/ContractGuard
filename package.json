@@ -2,6 +2,11 @@
   "name": "contractguard",
   "version": "1.0.0",
   "private": true,
+  "scripts": {
+    "install-client": "cd client && npm install",
+    "build": "npm run install-client && cd client && npm run build",
+    "start": "node server.js"
+  },
   "dependencies": {
     "express": "^4.19.2",
     "mongoose": "^8.5.0",
