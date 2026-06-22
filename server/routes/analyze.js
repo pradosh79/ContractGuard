@@ -33,7 +33,7 @@ Respond ONLY with valid JSON, no preamble, no markdown fences, matching this exa
 Only flag clauses that are genuinely notable. If the contract is short or has few risk areas, return fewer clauses rather than padding the list.`;
 
 // POST /api/analyze - upload a contract file (pdf or txt) or raw text, get AI risk report
-router.post('/analyze', upload.single('contract'), async (req, res) => {
+router.post('/', upload.single('contract'), async (req, res) => {
   try {
     let contractText = req.body.contractText || '';
     let fileName = 'pasted-text.txt';
